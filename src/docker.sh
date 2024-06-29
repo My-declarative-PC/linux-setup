@@ -1,7 +1,7 @@
 #!/bin/bash
 
 source /tmp/debian-setup/common/pretty_print.sh
-pretty_print 'Install **Docker**'
+pretty_print 'Install *Docker*'
 
 echo "Needed for docker installer"
 nala install -y ca-certificates curl
