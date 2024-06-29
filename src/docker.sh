@@ -1,5 +1,6 @@
 #!/bin/bash
 
+echo "Needed for docker installer"
 nala install -y ca-certificates curl
 
 echo "Add Docker's official GPG key"
