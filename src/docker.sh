@@ -15,9 +15,9 @@ echo \
 nala update
 
 echo "Install the latest version Docker packages"
-nala install -y \
-     docker-ce \
-     docker-ce-cli \
-     containerd.io \
+nala install -y           \
+     docker-ce            \
+     docker-ce-cli        \
+     containerd.io        \
      docker-buildx-plugin \
      docker-compose-plugin
