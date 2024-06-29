@@ -1,15 +1,28 @@
 #!/bin/bash
 
-echo "Add Gum's official GPG key"
-mkdir -p /etc/apt/keyrings
-curl -fsSL https://repo.charm.sh/apt/gpg.key | gpg --dearmor -o /etc/apt/keyrings/charm.gpg
+source /tmp/debian-setup/common/get_latest_version.sh
 
-echo "Add the repository to Apt sources"
-echo "deb [signed-by=/etc/apt/keyrings/charm.gpg] https://repo.charm.sh/apt/ * *" | tee /etc/apt/sources.list.d/charm.list
+TMP_PATH=/tmp/gum
+mkdir -p $TMP_PATH
 
-echo "Install the latest version Gum packages"
-nala update
-nala install -y gum
+cd $TMP_PATH
+URL=https://api.github.com/repos/charmbracelet/gum/tags
+VERSION=$(get_latest_version $URL)
+ARCH=$(dpkg --print-architecture)
+if [ "$ARCH" = "amd64" ]; then
+    ARCH="x86_64"
+fi
+URL=https://github.com/charmbracelet/gum/releases/download/v${VERSION}/gum_${VERSION}_Linux_${ARCH}.tar.gz
+echo "<<< ${URL} >>>"
+curl -fL $URL -o gum.tar.gz
+
+tar --same-permissions --extract --file=gum.tar.gz
+rm *gz
+cd gum*
+
+mv gum /usr/bin
+
+rm -rf $TMP_PATH
 
 gum style                   \
     --foreground 212        \
