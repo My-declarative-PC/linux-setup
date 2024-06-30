@@ -6,4 +6,5 @@ pretty_print 'Install *Some smale Utils*'
 nala install -y      \
      btrfs-compsize  \
      zram-tools      \
+     thunar          \
      distrobox
