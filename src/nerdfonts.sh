@@ -1,6 +1,7 @@
 #!/bin/bash
 
 source /tmp/debian-setup/common/command_exists.sh
+source /tmp/debian-setup/common/get_latest_version.sh
 source /tmp/debian-setup/common/check_font_installed.sh
 
 echo "Needed for font installer"
