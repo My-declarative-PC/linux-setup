@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source /tmp/debian-setup/common/pretty_print.sh
+source /var/lib/debian-setup/common/pretty_print.sh
 pretty_print 'Install *Pipe Wire*'
 
 echo "Install the latest version Pipe Wire packages"

@@ -3,9 +3,9 @@
 echo "Needed for gum installer"
 nala install -y jq curl
 
-source /tmp/debian-setup/common/get_latest_version.sh
+source /var/lib/debian-setup/common/get_latest_version.sh
 
-TMP_PATH=/tmp/gum
+TMP_PATH=/var/lib/gum
 mkdir -p $TMP_PATH
 
 cd $TMP_PATH

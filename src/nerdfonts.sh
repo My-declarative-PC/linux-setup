@@ -1,8 +1,8 @@
 #!/bin/bash
 
-source /tmp/debian-setup/common/command_exists.sh
-source /tmp/debian-setup/common/get_latest_version.sh
-source /tmp/debian-setup/common/check_font_installed.sh
+source /var/lib/debian-setup/common/command_exists.sh
+source /var/lib/debian-setup/common/get_latest_version.sh
+source /var/lib/debian-setup/common/check_font_installed.sh
 
 echo "Needed for font installer"
 nala install -y unzip
@@ -37,19 +37,19 @@ do
     fi
 
     echo "Installing font: $font"
-    wget -q --show-progress "https://github.com/ryanoasis/nerd-fonts/releases/download/v${VERSION}/$font.zip" -P /tmp
+    wget -q --show-progress "https://github.com/ryanoasis/nerd-fonts/releases/download/v${VERSION}/$font.zip" -P /var/lib
     if [ $? -ne 0 ]; then
         echo "Failed to download font: $font"
         continue
     fi
 
-    unzip -q /tmp/$font.zip -d $FONT_DIR/$font/
+    unzip -q /var/lib/$font.zip -d $FONT_DIR/$font/
     if [ $? -ne 0 ]; then
         echo "Failed to extract font: $font"
         continue
     fi
 
-    rm /tmp/$font.zip
+    rm /var/lib/$font.zip
 done
 
 # Update font cache

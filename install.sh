@@ -7,6 +7,6 @@ apt install -y nala
 nala install -y git sudo
 
 echo "Cloning stable Debian setup..."
-git clone https://github.com/My-declarative-PC/debian-setup.git /tmp/debian-setup
+git clone https://github.com/My-declarative-PC/debian-setup.git /var/lib/debian-setup
 
-source /tmp/debian-setup/setup.sh
+source /var/lib/debian-setup/setup.sh
