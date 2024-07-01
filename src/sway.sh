@@ -1,7 +1,7 @@
 #!/bin/bash
 
-source /var/lib/debian-setup/common/pretty_print.sh
-pretty_print 'Install *SWAY*'
+source /var/lib/debian-setup/common/print_installer_start.sh
+print_installer_start 'SWAY'
 
 nala install -y \
      light      \

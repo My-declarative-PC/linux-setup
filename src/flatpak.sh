@@ -1,7 +1,7 @@
 #!/bin/bash
 
-source /var/lib/debian-setup/common/pretty_print.sh
-pretty_print 'Install *FlatPak*'
+source /var/lib/debian-setup/common/print_installer_start.sh
+print_installer_start 'FlatPak'
 
 echo "Install the latest version FlatPak packages"
 nala install -y flatpak
