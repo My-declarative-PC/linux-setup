@@ -15,7 +15,7 @@ cd $TMP_PATH
 URL=https://api.github.com/repos/slavfox/Cozette/tags
 VERSION=$(get_latest_version $URL)
 UNDERSCORE_VERSION=$(echo $VERSION | sed 's/\./-/g')
-URL=https://github.com/slavfox/Cozette/releases/download/v${VERSION}/CozetteFonts-v-${UNDERSCORE_VERSION}.zip
+URL=https://github.com/slavfox/Cozette/releases/download/v.${VERSION}/CozetteFonts-v-${UNDERSCORE_VERSION}.zip
 echo "<<< ${URL} >>>"
 curl -fL $URL -o CozetteFonts.zip
 
