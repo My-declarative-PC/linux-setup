@@ -4,7 +4,7 @@ echo "Needed for all installers"
 apt update -y
 apt install -y nala
 
-nala install -y git sudo
+nala install -y git sudo apt-utils
 
 echo "Cloning stable Debian setup..."
 git clone https://github.com/My-declarative-PC/debian-setup.git /var/lib/debian-setup
