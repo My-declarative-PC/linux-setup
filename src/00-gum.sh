@@ -1,8 +1,5 @@
 #!/bin/bash
 
-echo "Needed for gum installer"
-nala install -y jq curl
-
 source /var/lib/debian-setup/common/get_latest_version.sh
 
 TMP_PATH=/var/lib/gum
