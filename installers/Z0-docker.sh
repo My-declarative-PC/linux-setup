@@ -1,7 +1,6 @@
 #!/bin/bash
 
 source /var/lib/debian-setup/common/print_installer_start.sh
-print_installer_start 'Docker'
 PACK='Docker'
 print_installer_start $PACK
 
