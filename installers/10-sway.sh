@@ -2,7 +2,10 @@
 
 source /var/lib/debian-setup/common/print_installer_start.sh
 print_installer_start 'SWAY'
+PACK='SWAY'
+print_installer_start $PACK
 
+print_installer_step "Install the latest version ${PACK} packages"
 nala install -y \
      light      \
      sway       \
@@ -14,11 +17,14 @@ nala install -y \
      wofi       \
      fonts-font-awesome
 
-# grim (screenshots in Wayland) and slurp (select a region in wayland) - kinda like scrot
+print_installer_step "Screen shot tools"
 sudo nala install -y grim slurp
 
-# Network File Tools/System Events
+print_installer_step "Network File Tools/System Events"
 sudo nala install -y dialog mtools dosfstools avahi-daemon acpi acpid
 
+print_installer_step "enable Sys. events"
 sudo systemctl enable avahi-daemon
 sudo systemctl enable acpid
+
+print_installer_stop $PACK
