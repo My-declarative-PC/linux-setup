@@ -2,7 +2,7 @@
 
 source /var/lib/debian-setup/common/get_latest_version.sh
 
-TMP_PATH=/var/lib/gum
+TMP_PATH=/tmp/gum
 mkdir -p $TMP_PATH
 
 cd $TMP_PATH
@@ -20,7 +20,7 @@ tar --same-permissions --extract --file=gum.tar.gz
 rm *gz
 cd gum*
 
-mv gum /usr/bin
+sudo mv gum /usr/bin
 
 rm -rf $TMP_PATH
 

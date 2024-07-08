@@ -5,11 +5,11 @@ PACK='Pipe Wire'
 print_installer_start $PACK
 
 print_installer_step "Install the latest version ${PACK} packages"
-nala install -y \
+sudo nala install -y \
      pipewire   \
      pipewire-pulse
 
 print_installer_step "enable ${PACK}"
-systemctl --now enable pipewire pipewire-pulse
+sudo systemctl --now enable pipewire pipewire-pulse
 
 print_installer_stop $PACK

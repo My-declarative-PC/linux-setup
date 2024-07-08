@@ -5,7 +5,7 @@ PACK='Docker'
 print_installer_start $PACK
 
 print_installer_step "Needed for ${PACK} installer"
-nala install -y ca-certificates curl
+sudo nala install -y ca-certificates curl
 
 print_installer_step "Delete old versions"
 for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo nala remove $pkg; done
@@ -23,7 +23,7 @@ echo \
 sudo nala update
 
 print_installer_step "Install the latest version ${PACK} packages"
-nala install -y           \
+sudo nala install -y           \
      docker-ce            \
      docker-ce-cli        \
      containerd.io        \

@@ -7,11 +7,11 @@ PACK='Nerd Fonts'
 print_installer_start $PACK
 
 print_installer_step "Needed for font installer"
-nala install -y unzip wget
+sudo nala install -y unzip wget
 
 # Create directory for fonts if it doesn't exist
 FONT_DIR=/usr/share/fonts
-mkdir -p $FONT_DIR
+sudo mkdir -p $FONT_DIR
 
 # Array of font names
 fonts=(
@@ -33,19 +33,21 @@ do
     fi
 
     print_installer_step "Installing font: $font"
-    wget -q --show-progress "https://github.com/ryanoasis/nerd-fonts/releases/download/v${VERSION}/$font.zip" -P /var/lib
+    TMP_FONT_DIR=/tmp/$font
+    mkdir -p $TMP_FONT_DIR
+    wget -q --show-progress "https://github.com/ryanoasis/nerd-fonts/releases/download/v${VERSION}/$font.zip" -P $TMP_FONT_DIR
     if [ $? -ne 0 ]; then
         echo "Failed to download font: $font"
         continue
     fi
 
-    unzip -q /var/lib/$font.zip -d $FONT_DIR/$font/
+    sudo unzip -q $TMP_FONT_DIR/$font.zip -d $FONT_DIR/$font/
     if [ $? -ne 0 ]; then
         echo "Failed to extract font: $font"
         continue
     fi
 
-    rm /var/lib/$font.zip
+    rm $TMP_FONT_DIR/$font.zip
 done
 
 # Update font cache

@@ -6,7 +6,7 @@ PACK='SWAY'
 print_installer_start $PACK
 
 print_installer_step "Install the latest version ${PACK} packages"
-nala install -y \
+sudo nala install -y \
      light      \
      sway       \
      swaybg     \

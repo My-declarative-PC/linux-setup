@@ -5,11 +5,11 @@ PACK='FlatPak'
 print_installer_start $PACK
 
 print_installer_step "Install the latest version ${PACK} packages"
-nala install -y flatpak
+sudo nala install -y flatpak
 
 print_installer_step "Add FlatHub repos"
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-echo 'export PATH=$PATH:/var/lib/flatpak/exports/bin' >> /etc/profile
+sudo echo 'export PATH=$PATH:/var/lib/flatpak/exports/bin' >> /etc/profile
 
 print_installer_step "Install esentials flatpaks"
 flatpak install --assumeyes flathub org.mozilla.firefox
