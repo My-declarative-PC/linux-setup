@@ -5,7 +5,7 @@ PACK='Network Manager'
 print_installer_start $PACK
 
 print_installer_step "Install the latest version ${PACK} packages"
-sudo nala install -y              \
+sudo nala install -y         \
      network-manager-ssh     \
      network-manager-openvpn \
      network-manager

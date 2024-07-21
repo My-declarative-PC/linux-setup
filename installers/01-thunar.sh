@@ -5,7 +5,7 @@ PACK='Thunar'
 print_installer_start $PACK
 
 print_installer_step "Install the latest version ${PACK} packages"
-sudo nala install -y            \
+sudo nala install -y       \
      thunar                \
      thunar-archive-plugin \
      thunar-volman         \

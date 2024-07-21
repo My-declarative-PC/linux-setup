@@ -6,7 +6,7 @@ print_installer_start $PACK
 
 print_installer_step "Install the latest version ${PACK} packages"
 sudo nala install -y \
-     pipewire   \
+     pipewire        \
      pipewire-pulse
 
 print_installer_step "enable ${PACK}"

@@ -23,7 +23,7 @@ echo \
 sudo nala update
 
 print_installer_step "Install the latest version ${PACK} packages"
-sudo nala install -y           \
+sudo nala install -y      \
      docker-ce            \
      docker-ce-cli        \
      containerd.io        \
