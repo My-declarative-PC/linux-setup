@@ -12,13 +12,14 @@ USBDEVICE=/dev/disk/by-label/KEYS
 if mount $USBDEVICE $MNT 2>/dev/null; then
     if [ -e $MNT/Luks/$CRYPTTAB_KEY.key ]; then
         cat $MNT/Luks/$CRYPTTAB_KEY.key
-        umount $USBDEVICE
+
+        umount $MNT
         echo "Success loading key file for {$CRYPTTAB_KEY} . Moving on." >&2
 
         exit
     fi
 
-    umount $USBDEVICE
+    umount $MNT
 fi
 
 /lib/cryptsetup/askpass "Insert pass key and press ENTER: "
