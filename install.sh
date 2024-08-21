@@ -8,6 +8,6 @@ sudo apt install -y nala
 sudo nala install -y git sudo apt-utils sd jq curl
 
 echo "Cloning stable Debian setup..."
-sudo git clone -b main-ubuntu-server https://github.com/My-declarative-PC/debian-setup.git /var/lib/debian-setup
+sudo git clone -b main-ubuntu-server-sway https://github.com/My-declarative-PC/debian-setup.git /var/lib/debian-setup
 
 source /var/lib/debian-setup/setup.sh
