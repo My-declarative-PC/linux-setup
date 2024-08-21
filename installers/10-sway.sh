@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source /var/lib/debian-setup/common/print_installer_start.sh
+source /var/lib/linux-setup/common/print_installer_start.sh
 PACK='SWAY'
 print_installer_start $PACK
 
