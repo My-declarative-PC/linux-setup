@@ -7,7 +7,6 @@ print_installer_start $PACK
 sudo nala install -y \
      btrfs-compsize  \
      zram-tools      \
-     thunar          \
      distrobox
 
 print_installer_stop $PACK
