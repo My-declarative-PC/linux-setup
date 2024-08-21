@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source /var/lib/debian-setup/common/get_latest_version.sh
+source /var/lib/linux-setup/common/get_latest_version.sh
 
 TMP_PATH=/tmp/gum
 mkdir -p $TMP_PATH

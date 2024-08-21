@@ -1,8 +1,8 @@
 #!/bin/bash
 
-source /var/lib/debian-setup/common/command_exists.sh
-source /var/lib/debian-setup/common/get_latest_version.sh
-source /var/lib/debian-setup/common/check_font_installed.sh
+source /var/lib/linux-setup/common/command_exists.sh
+source /var/lib/linux-setup/common/get_latest_version.sh
+source /var/lib/linux-setup/common/check_font_installed.sh
 PACK='Nerd Fonts'
 print_installer_start $PACK
 
