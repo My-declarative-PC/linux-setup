@@ -15,6 +15,7 @@ declare -a modules=(
   "fastfetch"
   "fish"
   "helix"
+  "i3"
   "starship"
   "wezterm"
   "zellij"
