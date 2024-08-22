@@ -13,8 +13,12 @@ sudo echo 'export PATH=$PATH:/var/lib/flatpak/exports/bin' >> /etc/profile
 
 print_installer_step "Install esentials flatpaks"
 flatpak install --assumeyes flathub org.mozilla.firefox
+sudo nala remove -y firefox
+
 flatpak install --assumeyes flathub org.telegram.desktop
+
 flatpak install --assumeyes flathub org.wezfurlong.wezterm
+
 flatpak install --assumeyes flathub org.keepassxc.KeePassXC
 
 print_installer_stop $PACK
