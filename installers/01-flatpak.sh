@@ -21,4 +21,6 @@ flatpak install --assumeyes flathub org.wezfurlong.wezterm
 
 flatpak install --assumeyes flathub org.keepassxc.KeePassXC
 
+flatpak install --assumeyes flathub net.cozic.joplin_desktop
+
 print_installer_stop $PACK
