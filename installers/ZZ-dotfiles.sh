@@ -8,7 +8,7 @@ print_installer_step "Needed for ${PACK} installer"
 sudo nala install -y stow
 
 cd ~
-gti clone https://github.com/My-declarative-PC/dotfiles.git
+git clone https://github.com/My-declarative-PC/dotfiles.git
 cd ~/dotfiles
 
 declare -a modules=(
