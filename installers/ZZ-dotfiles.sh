@@ -16,6 +16,7 @@ declare -a modules=(
   "fish"
   "helix"
   "starship"
+  "wezterm"
   "zellij"
 )
 
