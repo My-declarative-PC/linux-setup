@@ -1,7 +1,7 @@
 #!/bin/bash
 
 source /var/lib/linux-setup/common/print_installer_start.sh
-PACK='Dotfile's
+PACK="Dotfile's"
 print_installer_start $PACK
 
 print_installer_step "Needed for ${PACK} installer"
