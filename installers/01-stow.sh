@@ -1,6 +1,9 @@
 #!/bin/bash
 
 source /var/lib/linux-setup/common/get_latest_version.sh
+source /var/lib/linux-setup/common/print_installer_start.sh
+PACK="stow"
+print_installer_start $PACK
 
 TMP_PATH=/tmp/stow
 mkdir -p $TMP_PATH
@@ -14,3 +17,5 @@ rm *gz
 cd stow*
 
 sudo ./configure && sudo make install
+
+print_installer_stop $PACK
