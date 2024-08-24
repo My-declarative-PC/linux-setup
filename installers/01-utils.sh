@@ -6,7 +6,10 @@ print_installer_start $PACK
 
 sudo nala install -y \
      btrfs-compsize  \
-     zram-tools      \
-     distrobox
+     distrobox       \
+     eza             \
+     fish            \
+     zoxide          \
+     zram-tools
 
 print_installer_stop $PACK
