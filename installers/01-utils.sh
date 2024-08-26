@@ -5,8 +5,14 @@ PACK='Some smale Utils'
 print_installer_start $PACK
 
 sudo nala install -y \
+     btop            \
      btrfs-compsize  \
-     zram-tools      \
-     distrobox
+     distrobox       \
+     eza             \
+     fish            \
+     htop            \
+     vim             \
+     zoxide          \
+     zram-tools
 
 print_installer_stop $PACK

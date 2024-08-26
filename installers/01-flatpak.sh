@@ -23,4 +23,12 @@ flatpak install --assumeyes flathub org.keepassxc.KeePassXC
 
 flatpak install --assumeyes flathub net.cozic.joplin_desktop
 
+print_installer_step "Give Flatpak apps access to GTK themes and icons location"
+sudo flatpak override --filesystem=$HOME/.themes
+sudo flatpak override --filesystem=$HOME/.icons
+
+# print_installer_step "Tell Flatpak apps which theme/icon to use"
+# sudo flatpak override --env=GTK_THEME=my-theme
+# sudo flatpak override --env=ICON_THEME=my-icon-theme
+
 print_installer_stop $PACK
