@@ -9,7 +9,6 @@ sudo nala install -y \
      btrfs-compsize  \
      distrobox       \
      eza             \
-     fish            \
      htop            \
      vim             \
      zoxide          \
