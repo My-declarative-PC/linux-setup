@@ -9,7 +9,6 @@ sudo nala install -y   \
      btrfs-compsize    \
      distrobox         \
      eza               \
-     fish              \
      htop              \
      imagemagick-6.q16 \
      scrot             \
