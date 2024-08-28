@@ -30,4 +30,8 @@ sudo nala install -y      \
      docker-buildx-plugin \
      docker-compose-plugin
 
+print_installer_step "Post-installation steps for ${PACK}"
+sudo groupadd docker
+sudo usermod -aG docker $USER
+
 print_installer_stop $PACK
