@@ -12,6 +12,12 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
 sudo echo 'export PATH=$PATH:/var/lib/flatpak/exports/bin' >> /etc/profile
 
 print_installer_step "Install esentials flatpaks"
+flatpak install --assumeyes flathub it.mijorus.gearlever
+
+flatpak install --assumeyes flathub net.cozic.joplin_desktop
+
+flatpak install --assumeyes flathub org.keepassxc.KeePassXC
+
 flatpak install --assumeyes flathub org.mozilla.firefox
 sudo nala remove -y firefox
 
@@ -19,11 +25,8 @@ flatpak install --assumeyes flathub org.telegram.desktop
 
 flatpak install --assumeyes flathub org.wezfurlong.wezterm
 
-flatpak install --assumeyes flathub org.keepassxc.KeePassXC
-
-flatpak install --assumeyes flathub net.cozic.joplin_desktop
-
 print_installer_step "Give Flatpak apps access to GTK themes and icons location"
+sudo flatpak override --filesystem=$HOME/.local/share/themes
 sudo flatpak override --filesystem=$HOME/.themes
 sudo flatpak override --filesystem=$HOME/.icons
 
