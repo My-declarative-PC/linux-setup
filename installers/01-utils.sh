@@ -10,6 +10,7 @@ sudo nala install -y \
      distrobox       \
      eza             \
      htop            \
+     rofi            \
      vim             \
      zoxide          \
      zram-tools
