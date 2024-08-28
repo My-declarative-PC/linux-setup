@@ -10,6 +10,7 @@ sudo nala install -y   \
      distrobox         \
      eza               \
      htop              \
+     rofi              \
      imagemagick-6.q16 \
      scrot             \
      vim               \
