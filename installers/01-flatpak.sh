@@ -18,6 +18,9 @@ flatpak install --assumeyes flathub net.cozic.joplin_desktop
 
 flatpak install --assumeyes flathub org.keepassxc.KeePassXC
 
+flatpak install --assumeyes flathub com.helix_editor.Helix
+sudo flatpak override com.helix_editor.Helix --filesystem=xdg-config:ro
+
 flatpak install --assumeyes flathub org.mozilla.firefox
 sudo nala remove -y firefox
 
@@ -26,9 +29,9 @@ flatpak install --assumeyes flathub org.telegram.desktop
 flatpak install --assumeyes flathub org.wezfurlong.wezterm
 
 print_installer_step "Give Flatpak apps access to GTK themes and icons location"
-sudo flatpak override --filesystem=$HOME/.local/share/themes
-sudo flatpak override --filesystem=$HOME/.themes
-sudo flatpak override --filesystem=$HOME/.icons
+sudo flatpak override --filesystem=$HOME/.local/share/themes:ro
+sudo flatpak override --filesystem=$HOME/.themes:ro
+sudo flatpak override --filesystem=$HOME/.icons:ro
 
 # print_installer_step "Tell Flatpak apps which theme/icon to use"
 # sudo flatpak override --env=GTK_THEME=my-theme
