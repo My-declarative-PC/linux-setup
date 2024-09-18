@@ -6,7 +6,7 @@ PACK="stow"
 print_installer_start $PACK
 
 print_installer_step "Needed for ${PACK} installer"
-sudo nala install -y libtest-output-perl libtest-most-perl
+sudo nala install -y libtest-output-perl libtest-most-perl make
 
 TMP_PATH=/tmp/stow
 mkdir -p $TMP_PATH
