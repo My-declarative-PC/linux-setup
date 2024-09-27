@@ -10,6 +10,9 @@ mkdir -p $TMP_PATH
 print_installer_step "Download ${PACK} archive"
 cd $TMP_PATH
 ARCH=$(dpkg --print-architecture)
+if [ "$ARCH" = "arm64" ]; then
+    ARCH="aarch64"
+fi
 if [ "$ARCH" = "amd64" ]; then
     ARCH="x86_64"
 fi

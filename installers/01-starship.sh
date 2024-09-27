@@ -13,10 +13,13 @@ cd $TMP_PATH
 URL=https://api.github.com/repos/starship/starship/tags
 VERSION=$(get_latest_version $URL)
 ARCH=$(dpkg --print-architecture)
+if [ "$ARCH" = "arm64" ]; then
+    ARCH="aarch64"
+fi
 if [ "$ARCH" = "amd64" ]; then
     ARCH="x86_64"
 fi
-URL=https://github.com/starship/starship/releases/download/v${VERSION}/starship-${ARCH}-unknown-linux-gnu.tar.gz
+URL=https://github.com/starship/starship/releases/download/v${VERSION}/starship-${ARCH}-unknown-linux-musl.tar.gz
 echo "<<< ${URL} >>>"
 curl -fL $URL -o starship.tar.gz
 

@@ -13,6 +13,9 @@ cd $TMP_PATH
 URL=https://api.github.com/repos/fastfetch-cli/fastfetch/tags
 VERSION=$(get_latest_version $URL)
 ARCH=$(dpkg --print-architecture)
+if [ "$ARCH" = "arm64" ]; then
+    ARCH="aarch64"
+fi
 if [ "$ARCH" = "x86_64" ]; then
     ARCH="amd64"
 fi

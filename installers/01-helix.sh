@@ -13,6 +13,9 @@ cd $TMP_PATH
 URL=https://api.github.com/repos/helix-editor/helix/tags
 VERSION=$(get_latest_version $URL)
 ARCH=$(dpkg --print-architecture)
+if [ "$ARCH" = "arm64" ]; then
+    ARCH="aarch64"
+fi
 if [ "$ARCH" = "amd64" ]; then
     ARCH="x86_64"
 fi
