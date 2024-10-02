@@ -5,7 +5,7 @@ PACK="Dotfile's"
 print_installer_start $PACK
 
 cd ~
-git clone https://github.com/My-declarative-PC/dotfiles.git
+git clone https://github.com/My-declarative-PC/dotfiles.git ~/dotfiles
 cd ~/dotfiles
 
 declare -a modules=(
