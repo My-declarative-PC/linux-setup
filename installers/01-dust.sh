@@ -16,8 +16,8 @@ ARCH=$(dpkg --print-architecture)
 if [ "$ARCH" = "arm64" ]; then
     ARCH="aarch64"
 fi
-if [ "$ARCH" = "x86_64" ]; then
-    ARCH="amd64"
+if [ "$ARCH" = "amd64" ]; then
+    ARCH="x86_64"
 fi
 URL=https://github.com/bootandy/dust/releases/download/v${VERSION}/dust-v${VERSION}-${ARCH}-unknown-linux-musl.tar.gz
 echo "<<< ${URL} >>>"
@@ -31,5 +31,5 @@ cd dust*
 print_installer_step "Install ${PACK}"
 sudo cp dust /usr/bin
 
-rm -rf $tmp_path
-print_installer_stop $pack
+rm -rf $TMP_PATH
+print_installer_stop $PACK
