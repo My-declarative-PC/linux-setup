@@ -1,0 +1,1 @@
+../installers/01-fastfetch.sh
