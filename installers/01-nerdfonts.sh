@@ -21,7 +21,7 @@ fonts=(
     "RobotoMono"
 )
 
-URL=https://api.github.com/repos/ryanoasis/nerd-fonts/tags
+URL=https://api.github.com/repos/ryanoasis/nerd-fonts/git/refs/tags
 VERSION=$(get_latest_version $URL)
 
 # Loop through each font, check if installed, and install if not

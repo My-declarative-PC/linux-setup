@@ -10,7 +10,7 @@ mkdir -p $TMP_PATH
 
 print_installer_step "Download ${PACK} archive"
 cd $TMP_PATH
-URL=https://api.github.com/repos/sharkdp/fd/tags
+URL=https://api.github.com/repos/sharkdp/fd/git/refs/tags
 VERSION=$(get_latest_version $URL)
 ARCH=$(dpkg --print-architecture)
 if [ "$ARCH" = "arm64" ]; then
