@@ -10,10 +10,12 @@ sudo nala install -y   \
      distrobox         \
      eza               \
      htop              \
-     rofi              \
      imagemagick-6.q16 \
+     rofi              \
      scrot             \
      vim               \
+     xclip             \
+     xsel              \
      zoxide            \
      zram-tools
 
