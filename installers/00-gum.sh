@@ -6,7 +6,7 @@ TMP_PATH=/tmp/gum
 mkdir -p $TMP_PATH
 
 cd $TMP_PATH
-URL=https://api.github.com/repos/charmbracelet/gum/tags
+URL=https://api.github.com/repos/charmbracelet/gum/git/refs/tags
 VERSION=$(get_latest_version $URL)
 ARCH=$(dpkg --print-architecture)
 if [ "$ARCH" = "amd64" ]; then

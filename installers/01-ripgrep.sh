@@ -2,15 +2,15 @@
 
 source /var/lib/linux-setup/common/get_latest_version.sh
 source /var/lib/linux-setup/common/print_installer_start.sh
-PACK='StarShip'
+PACK='RipGrep'
 print_installer_start $PACK
 
-TMP_PATH=/tmp/starship
+TMP_PATH=/tmp/ripgrep
 mkdir -p $TMP_PATH
 
 print_installer_step "Download ${PACK} archive"
 cd $TMP_PATH
-URL=https://api.github.com/repos/starship/starship/git/refs/tags
+URL=https://api.github.com/repos/BurntSushi/ripgrep/git/refs/tags
 VERSION=$(get_latest_version $URL)
 ARCH=$(dpkg --print-architecture)
 if [ "$ARCH" = "arm64" ]; then
@@ -19,16 +19,21 @@ fi
 if [ "$ARCH" = "amd64" ]; then
     ARCH="x86_64"
 fi
-URL=https://github.com/starship/starship/releases/download/v${VERSION}/starship-${ARCH}-unknown-linux-musl.tar.gz
+LIB_TYPE="gnu"
+if [ "$ARCH" = "x86_64" ]; then
+    LIB_TYPE="musl"
+fi
+URL=https://github.com/BurntSushi/ripgrep/releases/download/${VERSION}/ripgrep-${VERSION}-${ARCH}-unknown-linux-${LIB_TYPE}.tar.gz
 echo "<<< ${URL} >>>"
-curl -fL $URL -o starship.tar.gz
+curl -fL $URL -o ripgrep.tar.gz
 
 print_installer_step "Unpack ${PACK} archive"
-tar --same-permissions --extract --file=starship.tar.gz
+tar --same-permissions --extract --file=ripgrep.tar.gz
 rm *gz
+cd ripgrep*
 
 print_installer_step "Install ${PACK}"
-sudo mv starship /usr/bin
+sudo cp -r rg /usr/bin/
 
 rm -rf $TMP_PATH
 print_installer_stop $PACK
