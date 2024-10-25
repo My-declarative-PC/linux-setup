@@ -5,7 +5,7 @@ sudo apt update
 sudo apt upgrade -y
 sudo apt install -y nala
 
-sudo nala install -y git sudo apt-utils sd jq curl
+sudo nala install -y git sudo apt-utils sd yq curl
 
 echo "Run installers"
 for script in /var/lib/linux-setup/installers/*.sh; do source $script; done

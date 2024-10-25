@@ -10,7 +10,7 @@ mkdir -p $TMP_PATH
 
 print_installer_step "Download ${PACK} archive"
 cd $TMP_PATH
-URL=https://api.github.com/repos/jesseduffield/lazygit/tags
+URL=https://api.github.com/repos/jesseduffield/lazygit/git/refs/tags
 VERSION=$(get_latest_version $URL)
 ARCH=$(dpkg --print-architecture)
 if [ "$ARCH" = "amd64" ]; then
