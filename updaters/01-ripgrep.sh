@@ -1,1 +1,1 @@
-./installers/01-ripgrep.sh
+../installers/01-ripgrep.sh

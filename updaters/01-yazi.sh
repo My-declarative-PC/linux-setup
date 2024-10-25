@@ -1,1 +1,1 @@
-./installers/01-yazi.sh
+../installers/01-yazi.sh
