@@ -3,6 +3,8 @@
 source /var/lib/linux-setup/common/command_exists.sh
 source /var/lib/linux-setup/common/get_latest_version.sh
 source /var/lib/linux-setup/common/check_font_installed.sh
+source /var/lib/linux-setup/common/print_installer_start.sh
+
 PACK='Nerd Fonts'
 print_installer_start $PACK
 
@@ -21,7 +23,7 @@ fonts=(
     "RobotoMono"
 )
 
-URL=https://api.github.com/repos/ryanoasis/nerd-fonts/git/refs/tags
+URL=https://api.github.com/repos/ryanoasis/nerd-fonts/releases/latest
 VERSION=$(get_latest_version $URL)
 
 # Loop through each font, check if installed, and install if not

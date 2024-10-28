@@ -29,6 +29,8 @@ flatpak install --assumeyes flathub org.telegram.desktop
 
 flatpak install --assumeyes flathub org.wezfurlong.wezterm
 
+flatpak install --assumeyes flathub com.brave.browser
+
 print_installer_step "Give Flatpak apps access to GTK themes and icons location"
 sudo flatpak override --filesystem=$HOME/.local/share/themes:ro
 sudo flatpak override --filesystem=$HOME/.themes:ro

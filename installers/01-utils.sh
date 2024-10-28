@@ -7,10 +7,12 @@ print_installer_start $PACK
 sudo nala install -y   \
      btop              \
      btrfs-compsize    \
+     cifs-utils        \
      distrobox         \
      eza               \
      htop              \
      imagemagick-6.q16 \
+     light-locker      \
      rofi              \
      scrot             \
      vim               \
