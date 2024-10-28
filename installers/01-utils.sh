@@ -11,6 +11,7 @@ sudo nala install -y \
      distrobox       \
      eza             \
      htop            \
+     light-locker    \
      rofi            \
      vim             \
      zoxide          \
