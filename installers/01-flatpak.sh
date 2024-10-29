@@ -18,12 +18,7 @@ flatpak install --assumeyes flathub net.cozic.joplin_desktop
 
 flatpak install --assumeyes flathub org.keepassxc.KeePassXC
 
-flatpak install --assumeyes flathub com.helix_editor.Helix
-sudo flatpak override com.helix_editor.Helix --filesystem=xdg-config:ro
-sudo ln -s /var/lib/flatpak/exports/bin/com.helix_editor.Helix /bin/hx
-
 flatpak install --assumeyes flathub org.mozilla.firefox
-sudo nala remove -y firefox
 
 flatpak install --assumeyes flathub org.telegram.desktop
 
