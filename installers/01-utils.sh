@@ -12,7 +12,6 @@ sudo nala install -y   \
      eza               \
      htop              \
      imagemagick-6.q16 \
-     light-locker      \
      rofi              \
      scrot             \
      vim               \
