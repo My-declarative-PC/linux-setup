@@ -17,7 +17,7 @@ python3 install.py $FLAVOR $ACCENT
 
 print_installer_step "Set the FlatPack theme"
 
-sudo flatpak override --env=GTK_THEME="${THEME}"
+ln -s "${HOME}/.local/share/themes" "${HOME}/.themes"
 sudo cp -r "${THEME_DIR}" /usr/share/themes/
 
 mkdir -p "${HOME}/.config/gtk-4.0" &&
@@ -26,6 +26,11 @@ ln -sf "${THEME_DIR}/gtk-4.0/gtk.css" "${HOME}/.config/gtk-4.0/gtk.css" &&
 ln -sf "${THEME_DIR}/gtk-4.0/gtk-dark.css" "${HOME}/.config/gtk-4.0/gtk-dark.css"
 
 echo "export GTK_THEME=${THEME}" | sudo tee -a /etc/profile
+print_installer_step "Give Flatpak apps access to GTK themes and icons location"
+flatpak override --user --filesystem=$HOME/.local/share/themes:ro
+flatpak override --user --filesystem=$HOME/.themes:ro
+flatpak override --user --filesystem=$HOME/.icons:ro
+flatpak override --user --env=GTK_THEME="${THEME}"
 
 rm -rf /tmp/theme
 print_installer_stop $PACK
