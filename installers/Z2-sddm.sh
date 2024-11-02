@@ -19,7 +19,7 @@ FLAVOR="mocha"
 TMP_PATH=/tmp/$PACK
 mkdir -p $TMP_PATH
 
-print_installer_step "Download ${PACK} archive"
+print_installer_step "Download ${PACK} theme archive"
 cd $TMP_PATH
 
 URL=https://github.com/catppuccin/sddm/releases/latest/download/catppuccin-${FLAVOR}.zip
