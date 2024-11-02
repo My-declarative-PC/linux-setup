@@ -9,7 +9,6 @@ sudo nala install -y \
      feh             \
      i3              \
      i3blocks        \
-     light-locker    \
      picom           \
      xinit           \
      xorg            \
