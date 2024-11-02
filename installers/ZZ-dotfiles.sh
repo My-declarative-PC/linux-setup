@@ -9,9 +9,11 @@ git clone https://github.com/My-declarative-PC/dotfiles.git ~/dotfiles
 cd ~/dotfiles
 
 declare -a modules=(
+  "dunst"
   "fastfetch"
   "fish"
   "helix"
+  "rofi"
   "starship"
   "wezterm"
   "zellij"
