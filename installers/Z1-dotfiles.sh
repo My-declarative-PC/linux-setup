@@ -9,13 +9,10 @@ cd /etc/dotfiles
 
 declare -a modules=(
   "bashrc"
-  "dunst"
   "fastfetch"
   "fish"
   "helix"
-  "rofi"
   "starship"
-  "wezterm"
   "zellij"
 )
 
