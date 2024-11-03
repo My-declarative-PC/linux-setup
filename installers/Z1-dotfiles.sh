@@ -8,6 +8,7 @@ sudo git clone https://github.com/My-declarative-PC/dotfiles.git /etc/dotfiles
 cd /etc/dotfiles
 
 declare -a modules=(
+  "bashrc"
   "dunst"
   "fastfetch"
   "fish"
@@ -24,11 +25,12 @@ do
   sudo git submodule init -- "$module"
   sudo git submodule update --init -- "$module"
   stow --dotfiles -t ~ "$module"
+  stow --dotfiles -t /root "$module"
 done
 
-module="bashrc"
+module="profile"
 echo "$module"
 sudo git submodule init -- "$module"
 sudo git submodule update --init -- "$module"
-sudo ln -s /etc/dotfiles/bashrc/custom_init.sh    /etc/profile.d/custom_init.sh
-sudo ln -s /etc/dotfiles/bashrc/custom_profile.sh /etc/profile.d/custom_profile.sh
+sudo ln -s /etc/dotfiles/$module/custom_init.sh    /etc/profile.d/custom_init.sh
+sudo ln -s /etc/dotfiles/$module/custom_profile.sh /etc/profile.d/custom_profile.sh
