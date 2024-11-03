@@ -4,8 +4,7 @@ source /var/lib/linux-setup/common/print_installer_start.sh
 PACK="Dotfile's"
 print_installer_start $PACK
 
-cd ~
-git clone https://github.com/My-declarative-PC/dotfiles.git /etc/dotfiles
+sudo git clone https://github.com/My-declarative-PC/dotfiles.git /etc/dotfiles
 cd /etc/dotfiles
 
 declare -a modules=(
@@ -23,10 +22,14 @@ declare -a modules=(
 for module in "${modules[@]}"
 do
   echo "$module"
-  git submodule init -- "$module"
-  git submodule update --init -- "$module"
+  sudo git submodule init -- "$module"
+  sudo git submodule update --init -- "$module"
   stow --dotfiles -t ~ "$module"
 done
 
+module="bashrc"
+echo "$module"
+sudo git submodule init -- "$module"
+sudo git submodule update --init -- "$module"
 sudo ln -s /etc/dotfiles/bashrc/custom_init.sh    /etc/profile.d/custom_init.sh
 sudo ln -s /etc/dotfiles/bashrc/custom_profile.sh /etc/profile.d/custom_profile.sh
