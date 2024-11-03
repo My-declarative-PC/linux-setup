@@ -21,8 +21,8 @@ do
   echo "$module"
   sudo git submodule init -- "$module"
   sudo git submodule update --init -- "$module"
-       stow --dotfiles -t ~     "$module"
-  sudo stow --dotfiles -t /root "$module"
+       stow --adopt --dotfiles -t ~     "$module"
+  sudo stow --adopt --dotfiles -t /root "$module"
 done
 
 module="profile"
