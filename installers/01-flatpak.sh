@@ -19,6 +19,7 @@ flatpak install --assumeyes flathub net.cozic.joplin_desktop
 flatpak install --assumeyes flathub org.keepassxc.KeePassXC
 
 flatpak install --assumeyes flathub org.mozilla.firefox
+sudo nala remove -y firefox
 
 flatpak install --assumeyes flathub org.telegram.desktop
 
