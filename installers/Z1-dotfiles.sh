@@ -11,6 +11,7 @@ declare -a modules=(
   "bashrc"
   "fastfetch"
   "fish"
+  "git"
   "helix"
   "starship"
   "zellij"
