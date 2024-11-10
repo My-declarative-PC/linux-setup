@@ -9,6 +9,7 @@ cd /etc/dotfiles
 
 declare -a modules=(
   "bashrc"
+  "btop"
   "fastfetch"
   "fish"
   "git"
