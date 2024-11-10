@@ -12,6 +12,7 @@ declare -a modules=(
   "dunst"
   "fastfetch"
   "fish"
+  "git"
   "helix"
   "i3"
   "rofi"
