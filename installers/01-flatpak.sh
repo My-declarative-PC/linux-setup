@@ -25,10 +25,6 @@ flatpak install --assumeyes flathub org.telegram.desktop
 
 flatpak install --assumeyes flathub org.wezfurlong.wezterm
 
-flatpak install --assumeyes flathub com.brave.browser
-
-# print_installer_step "Tell Flatpak apps which theme/icon to use"
-# sudo flatpak override --env=GTK_THEME=my-theme
-# sudo flatpak override --env=ICON_THEME=my-icon-theme
+flatpak install --assumeyes flathub com.brave.Browser
 
 print_installer_stop $PACK
