@@ -27,7 +27,6 @@ print_installer_step "Unpack ${PACK} archive"
 tar --same-permissions --extract --file=helix.tar.xz
 rm *xz
 cd helix*
-cd helix*
 
 print_installer_step "Install ${PACK}"
 sudo mv hx /usr/bin
